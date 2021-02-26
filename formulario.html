@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 2 formulario</title> 
+    </head>
+    <body>
+        <h1>Formulário</h1>
+        <form action="pag-post.html" method="POST">
+
+            <div>
+                <label for="name">Nome</label><br>
+                <input type="text" id="name" name="name" required="required" placeholder="Digite seu nome"><br> 
+            </div>
+
+            <div>
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="email" required="required" placeholder="Digite seu email"><br> 
+            </div>
+
+            <div>
+                <label for="cidade">Selecione sua Cidade</label><br>
+                <select required="required" name="cidade">
+                    <option selected="select" value="">Selecione</option>
+                    <option value="1">Pelotas</option>
+                    <option value="2">Porto Alegre</option>
+                    <option value="3">Florianópolis</option>
+                </select> 
+            </div>
+
+            <div>
+                <label for="sexo">Selecione seu sexo</label><br>
+                <select required="required" name="sexo">
+                    <option selected="select" value="">Selecione</option>
+                    <option value="4">Masculino</option>
+                    <option value="5">Feminino</option>
+                    <option value="6">Outro</option>
+                </select>
+             </div>
+
+             <div>
+                 <label for="mensagem">Mensagem</label><br>
+                 <textarea name="mensagem" placeholder="Digite sua Mensagem" cols="30" rows="5"></textarea>
+             </div>
+
+             <div>
+                <button type="submit">Enviar</button>
+             </div>
+
+        </form>
+
+    </body>
+</html>
