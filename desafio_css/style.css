@@ -1,0 +1,35 @@
+body {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+@media only screen and(max-width: 500px){
+    body {
+        margin: 0px 30px;
+    }
+}
+
+h1 {
+    color:black;
+}
+.ps {
+    width: 600px;
+}
+div {
+    margin: 10px 100px;
+    align-items: flex-end;
+    /*padding: 20px;
+    width: 80%;*/
+}
+.parags {
+    display: flexbox;
+    background-color: grey;
+    align-items: left;
+}
+#second {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
