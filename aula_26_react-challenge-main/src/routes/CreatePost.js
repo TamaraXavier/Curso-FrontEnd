@@ -1,0 +1,31 @@
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import Form from "../components/Form";
+
+import { CreateDiv, CreateTitleh1 } from '../styles/CreatPost'; //
+import "../styles/style.css";
+
+import { createPost } from "../services/posts";
+
+const CreatePost = () => {
+  const history = useHistory();
+
+  const onSubmit = async (data) => {
+    try {
+      if(data.title === "" || data.body === "") return toast.error("Oops!! algum dos dois campos está vazio. Preencha os dois campos e tente novamente");
+      await createPost(data)
+      toast.success("Post criado com sucesso!!");
+      history.push("/list-posts");
+    } catch {
+      toast.error("Oops!! Houve um problema com a criação do post");
+    }
+  };
+  return (
+    <CreateDiv>
+      <CreateTitleh1>Criar uma publicação</CreateTitleh1>
+      <Form func={onSubmit} />
+    </CreateDiv>
+  );
+};
+
+export default CreatePost;
